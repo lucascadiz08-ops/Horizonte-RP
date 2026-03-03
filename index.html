@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CREADOR DE DNI - TU RP</title>
+<title>CREADOR DE DNI - LeidersRP</title>
 <style>
 body {
     font-family: 'Arial', sans-serif;
@@ -30,7 +30,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-input, select {
+input {
     width: 90%;
     padding: 10px;
     margin: 8px 0;
@@ -76,13 +76,12 @@ button:hover {
     margin: 5px 0;
     font-size: 16px;
 }
-
 </style>
 </head>
 <body>
 
 <div class="container">
-<h1>CREADOR DE DNI - TU RP</h1>
+<h1>CREADOR DE DNI - LeidersRP</h1>
 
 <input type="text" id="psid" placeholder="ID PlayStation">
 <input type="text" id="discord" placeholder="Discord ID">
@@ -92,6 +91,8 @@ button:hover {
 <input type="date" id="fecha">
 <input type="text" id="trabajo" placeholder="Trabajo">
 <input type="text" id="rango" placeholder="Rango">
+<input type="text" id="busca" placeholder="Busca y captura">
+<input type="text" id="multas" placeholder="Multas">
 
 <button onclick="crearDNI()">Crear Nuevo Usuario</button>
 
@@ -105,6 +106,8 @@ button:hover {
 <p><strong>Fecha Nacimiento:</strong> <span id="mostrarFecha"></span></p>
 <p><strong>Trabajo:</strong> <span id="mostrarTrabajo"></span></p>
 <p><strong>Rango:</strong> <span id="mostrarRango"></span></p>
+<p><strong>Busca y captura:</strong> <span id="mostrarBusca"></span></p>
+<p><strong>Multas:</strong> <span id="mostrarMultas"></span></p>
 </div>
 
 </div>
@@ -119,10 +122,12 @@ function crearDNI(){
     document.getElementById("mostrarFecha").innerText = document.getElementById("fecha").value;
     document.getElementById("mostrarTrabajo").innerText = document.getElementById("trabajo").value;
     document.getElementById("mostrarRango").innerText = document.getElementById("rango").value;
+    document.getElementById("mostrarBusca").innerText = document.getElementById("busca").value;
+    document.getElementById("mostrarMultas").innerText = document.getElementById("multas").value;
     
     document.getElementById("dniCard").style.display = "block";
 }
 </script>
 
 </body>
-                             </html>
+</html>
