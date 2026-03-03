@@ -1,1 +1,128 @@
-<!DOCTYPE html> <html lang="es"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>CREADOR DE DNI - TU RP</title> <style> body { font-family: 'Arial', sans-serif; background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; } .container { background: #1c1c1c; padding: 30px; border-radius: 15px; width: 100%; max-width: 450px; box-shadow: 0 0 20px rgba(0,0,0,0.7); text-align: center; } h1 { color: #00c3ff; margin-bottom: 20px; } input, select { width: 90%; padding: 10px; margin: 8px 0; border-radius: 8px; border: none; outline: none; } button { padding: 10px 20px; margin-top: 10px; border: none; border-radius: 8px; background: #00c3ff; color: #000; font-weight: bold; cursor: pointer; transition: 0.3s; }
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CREADOR DE DNI - TU RP</title>
+<style>
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #1c1c1c;
+    padding: 30px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    text-align: center;
+}
+
+h1 {
+    color: #00c3ff;
+    margin-bottom: 20px;
+}
+
+input, select {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #00c3ff;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #00a1d6;
+}
+
+.dni-card {
+    display: none;
+    margin-top: 20px;
+    background: #fff;
+    color: #000;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    text-align: left;
+}
+
+.dni-card h2 {
+    text-align: center;
+    color: #203a43;
+    margin-bottom: 15px;
+}
+
+.dni-card p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+<h1>CREADOR DE DNI - TU RP</h1>
+
+<input type="text" id="psid" placeholder="ID PlayStation">
+<input type="text" id="discord" placeholder="Discord ID">
+<input type="text" id="nombre" placeholder="Nombre y Apellidos">
+<input type="text" id="sexo" placeholder="Sexo">
+<input type="text" id="nacionalidad" placeholder="Nacionalidad">
+<input type="date" id="fecha">
+<input type="text" id="trabajo" placeholder="Trabajo">
+<input type="text" id="rango" placeholder="Rango">
+
+<button onclick="crearDNI()">Crear Nuevo Usuario</button>
+
+<div class="dni-card" id="dniCard">
+<h2>DNI REGISTRADO</h2>
+<p><strong>ID PS:</strong> <span id="mostrarPS"></span></p>
+<p><strong>Discord:</strong> <span id="mostrarDiscord"></span></p>
+<p><strong>Nombre:</strong> <span id="mostrarNombre"></span></p>
+<p><strong>Sexo:</strong> <span id="mostrarSexo"></span></p>
+<p><strong>Nacionalidad:</strong> <span id="mostrarNacionalidad"></span></p>
+<p><strong>Fecha Nacimiento:</strong> <span id="mostrarFecha"></span></p>
+<p><strong>Trabajo:</strong> <span id="mostrarTrabajo"></span></p>
+<p><strong>Rango:</strong> <span id="mostrarRango"></span></p>
+</div>
+
+</div>
+
+<script>
+function crearDNI(){
+    document.getElementById("mostrarPS").innerText = document.getElementById("psid").value;
+    document.getElementById("mostrarDiscord").innerText = document.getElementById("discord").value;
+    document.getElementById("mostrarNombre").innerText = document.getElementById("nombre").value;
+    document.getElementById("mostrarSexo").innerText = document.getElementById("sexo").value;
+    document.getElementById("mostrarNacionalidad").innerText = document.getElementById("nacionalidad").value;
+    document.getElementById("mostrarFecha").innerText = document.getElementById("fecha").value;
+    document.getElementById("mostrarTrabajo").innerText = document.getElementById("trabajo").value;
+    document.getElementById("mostrarRango").innerText = document.getElementById("rango").value;
+    
+    document.getElementById("dniCard").style.display = "block";
+}
+</script>
+
+</body>
+                             </html>
