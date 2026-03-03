@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CREADOR DE DNI - LeidersRP</title>
+
 <style>
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     display: flex;
     justify-content: center;
@@ -78,6 +79,7 @@ button:hover {
 }
 </style>
 </head>
+
 <body>
 
 <div class="container">
@@ -91,8 +93,6 @@ button:hover {
 <input type="date" id="fecha">
 <input type="text" id="trabajo" placeholder="Trabajo">
 <input type="text" id="rango" placeholder="Rango">
-<input type="text" id="busca" placeholder="Busca y captura">
-<input type="text" id="multas" placeholder="Multas">
 
 <button onclick="crearDNI()">Crear Nuevo Usuario</button>
 
@@ -106,8 +106,8 @@ button:hover {
 <p><strong>Fecha Nacimiento:</strong> <span id="mostrarFecha"></span></p>
 <p><strong>Trabajo:</strong> <span id="mostrarTrabajo"></span></p>
 <p><strong>Rango:</strong> <span id="mostrarRango"></span></p>
-<p><strong>Busca y captura:</strong> <span id="mostrarBusca"></span></p>
-<p><strong>Multas:</strong> <span id="mostrarMultas"></span></p>
+<p><strong>Busca y captura:</strong> <span>No</span></p>
+<p><strong>Multas:</strong> <span>0</span></p>
 </div>
 
 </div>
@@ -122,9 +122,7 @@ function crearDNI(){
     document.getElementById("mostrarFecha").innerText = document.getElementById("fecha").value;
     document.getElementById("mostrarTrabajo").innerText = document.getElementById("trabajo").value;
     document.getElementById("mostrarRango").innerText = document.getElementById("rango").value;
-    document.getElementById("mostrarBusca").innerText = document.getElementById("busca").value;
-    document.getElementById("mostrarMultas").innerText = document.getElementById("multas").value;
-    
+
     document.getElementById("dniCard").style.display = "block";
 }
 </script>
